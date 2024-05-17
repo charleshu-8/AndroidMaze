@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.WinningActivity">
+
+    <ImageView
+        android:id="@+id/winBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/death_star_explosion_x_wing"
+        android:contentDescription="@string/play_win_image_text" />
+
+    <TextView
+        android:id="@+id/winTitlePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/player_win_title"
+        android:textSize="48sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/winTitleDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/driver_win_title"
+        android:textSize="48sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/winTextPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_win_text"
+        android:textSize="24sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winTitlePlayer" />
+
+    <TextView
+        android:id="@+id/winTextDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/driver_win_text"
+        android:textSize="24sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winTitlePlayer" />
+
+    <TextView
+        android:id="@+id/winReturnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/end_return_text"
+        android:textColor="@color/banana_yellow"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winTextPlayer"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/winStatsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/end_stats_text"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintBottom_toTopOf="@+id/winStatsShortestText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winStatsTravelledText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/end_stats_travelled_text"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintBottom_toTopOf="@+id/winStatsShortestText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winStatsShortestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/end_stats_shortest_text"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintBottom_toTopOf="@+id/winStatsEnergyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winStatsEnergyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="106dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/end_stats_energy_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winStatsTravelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="167dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winStatsTravelledText" />
+
+    <TextView
+        android:id="@+id/winStatsShortest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="137dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winStatsShortestText" />
+
+    <TextView
+        android:id="@+id/winStatsEnergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="105dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winStatsEnergyText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

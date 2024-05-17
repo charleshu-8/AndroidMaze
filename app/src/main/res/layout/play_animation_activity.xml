@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.PlayAnimationActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoMazePanel"
+        app:srcCompat="@drawable/x_wing_cockpit"
+        android:contentDescription="@string/play_background_image_text" />
+
+
+    <TextView
+        android:id="@+id/speedSlowerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-10dp"
+        android:text="@string/play_minus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedSlider"
+        tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/autoSensorBackward"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoPlayPause"
+        app:srcCompat="@android:drawable/presence_online"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/play_auto_sensor_description_back" />
+
+    <ImageView
+        android:id="@+id/autoSensorRight"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/presence_online"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/play_auto_sensor_description_right"/>
+
+    <ImageView
+        android:id="@+id/autoSensorLeft"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoPlayPause"
+        app:srcCompat="@android:drawable/presence_online"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/play_auto_sensor_description_left"/>
+
+    <edu.wm.cs.cs301.amazebycharleshu.gui.MazePanel
+        android:id="@+id/autoMazePanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/autoMapText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="147dp"
+        android:text="@string/play_map_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoMazePanel" />
+
+    <Button
+        android:id="@+id/autoMapShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginEnd="162dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_map_show"
+        android:textColor="@color/light_blue_400"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoMapText" />
+
+    <Button
+        android:id="@+id/autoSizeZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_minus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/autoSizeZoomIn"
+        app:layout_constraintTop_toBottomOf="@+id/autoMapShow"
+        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/autoSizeZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_plus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoMapShow"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/autoSizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/play_map_size_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        app:layout_constraintEnd_toStartOf="@+id/autoSizeZoomOut"
+        app:layout_constraintTop_toBottomOf="@+id/autoMapShow" />
+
+    <ProgressBar
+        android:id="@+id/autoEnergyProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="204dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/autoPlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoEnergyText" />
+
+    <TextView
+        android:id="@+id/autoEnergyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="79dp"
+        android:text="@string/play_auto_energy_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        app:layout_constraintBottom_toTopOf="@+id/autoSpeedText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/autoSpeedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/play_auto_speed_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/speedSlider"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/autoSensorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/play_auto_sensor_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        app:layout_constraintBottom_toTopOf="@+id/autoSensorForward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoPlayPause" />
+
+    <ImageView
+        android:id="@+id/autoSensorForward"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="76dp"
+        app:layout_constraintBottom_toTopOf="@+id/autoSensorBody"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoPlayPause"
+        app:srcCompat="@android:drawable/presence_online"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/play_auto_sensor_description_front"/>
+
+    <ImageView
+        android:id="@+id/autoSensorBody"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:contentDescription="@string/play_auto_sensor_description_body"
+        app:layout_constraintBottom_toTopOf="@+id/autoSensorBackward"
+        app:layout_constraintEnd_toStartOf="@+id/autoSensorRight"
+        app:layout_constraintStart_toEndOf="@+id/autoSensorLeft"
+        app:srcCompat="@drawable/up_arrow"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/autoPlayPause"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/black"
+        android:contentDescription="@string/play_auto_description_play_pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/speedSlider"
+        app:srcCompat="@drawable/play"
+        tools:ignore="ImageContrastCheck" />
+
+    <SeekBar
+        android:id="@+id/speedSlider"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="159dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="26dp"
+        android:max="9"
+        android:min="1"
+        android:progress="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/speedFasterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="-10dp"
+        android:text="@string/play_plus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedSlider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

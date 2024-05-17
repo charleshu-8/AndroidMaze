@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.LosingActivity">
+
+    <ImageView
+        android:id="@+id/loseBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/play_lose_image_text"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/death_star"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/loseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/driver_lose_title"
+        android:textSize="48sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/driver_lose_text"
+        android:textSize="24sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseTitle" />
+
+    <TextView
+        android:id="@+id/loseStatsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="42dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/end_stats_text"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/loseStatsShortestText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/loseStatsTravelledText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="8dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/end_stats_travelled_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/loseStatsShortestText"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/loseStatsShortestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/end_stats_shortest_text"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintBottom_toTopOf="@+id/loseStatsEnergyText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/loseStatsEnergyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="400dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/end_stats_energy_text"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/loseStatsTravelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="461dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loseStatsTravelledText" />
+
+    <TextView
+        android:id="@+id/loseStatsShortest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginBottom="431dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loseStatsShortestText" />
+
+    <TextView
+        android:id="@+id/loseStatsEnergy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginBottom="399dp"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/loseStatsEnergyText" />
+
+    <TextView
+        android:id="@+id/crashedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="168dp"
+        android:text="@string/driver_lose_crash"
+        android:textSize="20sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseText" />
+
+    <TextView
+        android:id="@+id/noEnergyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="153dp"
+        android:text="@string/driver_lose_energy"
+        android:textSize="20sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseText" />
+
+    <ImageView
+        android:id="@+id/crashedImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="57dp"
+        android:background="@color/black"
+        android:contentDescription="@string/driver_lose_crash"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseTitle"
+        app:srcCompat="@drawable/x_wing_explosion" />
+
+    <ImageView
+        android:id="@+id/noEnergyImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="57dp"
+        android:background="@color/black"
+        android:contentDescription="@string/driver_lose_energy"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loseTitle"
+        app:srcCompat="@drawable/x_wing_in_swamp" />
+
+    <TextView
+        android:id="@+id/loseReturnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/end_return_text"
+        android:textSize="24sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/crashedImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

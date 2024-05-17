@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.PlayManuallyActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualMazePanel"
+        app:srcCompat="@drawable/x_wing_cockpit"
+        android:contentDescription="@string/play_background_image_text" />
+
+    <edu.wm.cs.cs301.amazebycharleshu.gui.MazePanel
+        android:id="@+id/manualMazePanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/manualMapText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="146dp"
+        android:layout_marginEnd="147dp"
+        android:text="@string/play_map_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualMazePanel" />
+
+    <Button
+        android:id="@+id/manualMapShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_map_show"
+        android:textColor="@color/light_blue_400"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualMazePanel" />
+
+    <Button
+        android:id="@+id/manualMapSolution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="47dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_map_solution"
+        android:textColor="@color/light_blue_400"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/manualMapWalls"
+        app:layout_constraintStart_toEndOf="@+id/manualMapShow"
+        app:layout_constraintTop_toBottomOf="@+id/manualMapText" />
+
+    <Button
+        android:id="@+id/manualMapWalls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_map_walls"
+        android:textColor="@color/light_blue_400"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualMazePanel" />
+
+    <Button
+        android:id="@+id/manualSizeZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_minus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/manualSizeZoomIn"
+        app:layout_constraintTop_toBottomOf="@+id/manualMapSolution"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/manualSizeZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/play_plus_text"
+        android:textColor="@color/light_blue_400"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/manualMapSolution" />
+
+    <TextView
+        android:id="@+id/manualSizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="26dp"
+        android:text="@string/play_map_size_text"
+        android:textSize="20sp"
+        android:textColor="@color/light_blue_400"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toStartOf="@+id/manualSizeZoomOut"
+        app:layout_constraintTop_toBottomOf="@+id/manualMapShow" />
+
+    <ImageButton
+        android:id="@+id/manualMoveUp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/black"
+        android:contentDescription="@string/play_manual_map_content_description_up"
+        app:layout_constraintBottom_toTopOf="@+id/manualMoveJump"
+        app:layout_constraintEnd_toStartOf="@+id/manualMoveRight"
+        app:layout_constraintStart_toEndOf="@+id/manualMoveLeft"
+        app:srcCompat="@drawable/up_arrow"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/manualMoveJump"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/black"
+        android:contentDescription="@string/play_manual_map_content_description_jump"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/manualMoveRight"
+        app:layout_constraintStart_toEndOf="@+id/manualMoveLeft"
+        app:srcCompat="@drawable/jump"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/manualMoveLeft"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/left_arrow"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/play_manual_map_content_description_left" />
+
+    <ImageButton
+        android:id="@+id/manualMoveRight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/black"
+        android:contentDescription="@string/play_manual_map_content_description_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/right_arrow"
+        tools:ignore="ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.AMazeActivity">
+
+    <ImageView
+        android:id="@+id/introBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/death_star_endor"
+        android:contentDescription="@string/game_intro_image_text" />
+
+    <TextView
+        android:id="@+id/gameIntroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/game_intro_text_1"
+        android:textColor="@color/banana_yellow"
+        android:textSize="58sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TextView
+        android:id="@+id/gameIntroText2"
+        android:layout_width="133dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginEnd="175dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/game_intro_text_2"
+        android:textColor="@color/banana_yellow"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/gameIntroText3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameIntroText" />
+
+    <TextView
+        android:id="@+id/gameIntroText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/game_intro_text_3"
+        android:textColor="@color/banana_yellow"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameIntroText2" />
+
+    <RadioGroup
+        android:id="@+id/genRoomRadioGroup"
+        android:layout_width="120dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@+id/genRoomsText"
+        app:layout_constraintTop_toBottomOf="@+id/genComplexitySeekbar">
+
+        <RadioButton
+            android:id="@+id/genRoomsYesRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maze_gen_rooms_select_yes"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:buttonTint="@color/black"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/genRoomsNoRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maze_gen_rooms_select_no"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:buttonTint="@color/black"
+            tools:ignore="TextContrastCheck" />
+    </RadioGroup>
+
+    <SeekBar
+        android:id="@+id/genComplexitySeekbar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="201dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="98dp"
+        android:max="9"
+        android:thumbTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genComplexityText"
+        app:layout_constraintTop_toBottomOf="@+id/genIntroText" />
+
+    <TextView
+        android:id="@+id/genRoomsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/maze_gen_rooms"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/genRoomRadioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genComplexitySeekbar" />
+
+    <Button
+        android:id="@+id/genRevisitButton"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/maze_gen_exec_revisit"
+        android:textSize="24sp"
+        android:textColor="@color/light_blue_400"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/genIntroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="113dp"
+        android:layout_marginBottom="11dp"
+        android:text="@string/maze_gen_intro"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/genComplexitySeekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameIntroText3" />
+
+    <TextView
+        android:id="@+id/genComplexityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/maze_gen_complexity"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/genRoomsText"
+        app:layout_constraintEnd_toStartOf="@+id/genComplexitySeekbar"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/genAlgorithmSpinner"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="47dp"
+        android:entries="@array/maze_gen_algorithm_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genAlgorithmText"
+        app:layout_constraintTop_toBottomOf="@+id/genRoomRadioGroup" />
+
+    <Button
+        android:id="@+id/genExploreButton"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/maze_gen_exec_explore"
+        android:textSize="24sp"
+        android:textColor="@color/light_blue_400"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/genRevisitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/genAlgorithmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/maze_gen_algorithm"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/genAlgorithmSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genRoomRadioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

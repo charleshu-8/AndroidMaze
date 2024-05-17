@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gui.GeneratingActivity">
+
+    <ImageView
+        android:id="@+id/genBackgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/hangar_bay"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="171dp"
+        android:contentDescription="@string/maze_gen_image_text" />
+
+    <TextView
+        android:id="@+id/genIntroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="@string/robot_gen_title_text"
+        android:textSize="48sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="363dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genIntroText" />
+
+    <TextView
+        android:id="@+id/genProgressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="174dp"
+        android:gravity="center"
+        android:text="@string/robot_gen_progress_text"
+        android:textSize="16sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/robotDriverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="234dp"
+        android:text="@string/robot_gen_driver"
+        android:textSize="16sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <RadioGroup
+        android:id="@+id/robotConfigRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toEndOf="@+id/robotConfigText"
+        app:layout_constraintTop_toBottomOf="@+id/robotDriverRadioGroup">
+
+        <RadioButton
+            android:id="@+id/robotConfigPremiumRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_sensors_select_premium"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+
+        <RadioButton
+            android:id="@+id/robotConfigMediocreRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_sensors_select_mediocre"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+
+        <RadioButton
+            android:id="@+id/robotConfigSosoRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_sensors_select_soso"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+
+        <RadioButton
+            android:id="@+id/robotConfigShakyRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_sensors_select_shaky"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/robotConfigText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="38dp"
+        android:text="@string/robot_gen_sensors"
+        android:textSize="16sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/robotDriverRadioGroup" />
+
+    <RadioGroup
+        android:id="@+id/robotDriverRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toEndOf="@+id/robotDriverText"
+        app:layout_constraintTop_toBottomOf="@+id/robotDriverIntroText">
+
+        <RadioButton
+            android:id="@+id/robotDriverManualRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_driver_select_manual"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+
+        <RadioButton
+            android:id="@+id/robotDriverWallfollowerRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_driver_select_wallfollower"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+
+        <RadioButton
+            android:id="@+id/robotDriverWizardRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/robot_gen_driver_select_wizard"
+            android:textSize="16sp"
+            android:textColor="@color/banana_yellow"
+            android:shadowColor="@color/black"
+            android:shadowRadius="20" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/robotDriverIntroText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="123dp"
+        android:gravity="center"
+        android:text="@string/robot_gen_intro"
+        android:textSize="24sp"
+        android:textColor="@color/banana_yellow"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genProgressText" />
+
+    <TextView
+        android:id="@+id/genProgressDoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="93dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/robot_gen_progress_finish_text"
+        android:textColor="@color/banana_yellow"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genProgressText" />
+
+    <TextView
+        android:id="@+id/genProgressNotDoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="93dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/robot_gen_progress_incomplete_text"
+        android:textColor="@color/banana_yellow"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genProgressText" />
+
+    <TextView
+        android:id="@+id/genProgressContinueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:layout_marginEnd="121dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/robot_gen_progress_finish_start"
+        android:textColor="@color/banana_yellow"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genProgressDoneText" />
+
+    <TextView
+        android:id="@+id/genProgressWarnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="62dp"
+        android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="20"
+        android:text="@string/robot_gen_progress_finish_warn"
+        android:textColor="@color/banana_yellow"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genProgressDoneText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
