@@ -1,3 +1,3 @@
 # AndroidMaze
 
-Implementation of a maze game in Java for PC.
+Implementation of a Star Wars themed maze game in Java for Android.
